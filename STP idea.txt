@@ -1,0 +1,15 @@
+The Prediction Center 
+
+It is a portfolio of Prediction related projects. It a web app consisting of Multiple Machine learning Models. Its made to have a live demo summary of all the machine learning projects
+we have done so far. It is made in view that the models we make are not being used by public so far they get stored in our local systems hence by developing this web app we can show to the 
+public what we have done so far. it can also be used as an insperation for upcoming batches to get them introduced to machine learning in a fun and interactive way.
+
+we have in corporated multiple models till now in this project namely:
+	- Wine Quality prediction
+	- Used car prize prediction
+	- Diabates prediction
+	- Heart Disease prediction
+	- Medical insurance prize prediction
+	- laptop prize prediction
+
+Each and every one of the model solves one of the kind of problem which we face in our daily life by clubing them at one place we can have easy and immidiate access to all of them at a go.

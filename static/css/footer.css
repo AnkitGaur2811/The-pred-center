@@ -1,0 +1,11 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+/* footer */
+.foot{
+    background-color:#ECDBBA;
+    margin-top:0.5rem;
+}
+/* foottext */
+.foottext{
+    font-family: 'Prosto One', cursive;
+}

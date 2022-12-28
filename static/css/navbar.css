@@ -1,0 +1,29 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap');
+/* Background Colour change */
+.navbar{
+    background-color:#161616;
+}
+.dropdown-menu{
+    background-color:#161616;
+}
+/* heading style */
+.predname{
+    font-weight: bold;
+    font-family: 'Prosto One', cursive;
+    color: white;
+}
+/* navbar item (home etc.) */
+.navbaritem{
+    font-family: 'Bitter', serif;
+    font-weight:500;
+    border-radius: 1rem;
+    color: white;
+}
+.navbaritem:hover{
+    background-color:#ECDBBA;
+}
+.dropitem:hover{
+    background-color:#ECDBBA;
+}

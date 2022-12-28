@@ -1,2 +1,137 @@
 <!-- Extends base -->
 {% extends 'shared/base.html' %}
+
+<!-- CSS block -->
+{% block CSS %}
+<link
+  href="{{ url_for('static', path='css/homepage.css') }}"  rel="stylesheet"/>
+{% endblock CSS%}
+
+<!-- title block -->
+{% block title %} Home {% endblock title %}
+
+<!-- Content block -->
+{% block content %}
+<section id="predcenter">
+  <div id="writtencontent">
+    <h3 id="heading">The Prediction Center</h3>
+    <h6 id="problem">
+      Welcome to the Prediction Center - a one-stop destination for solving a
+      variety of problems using machine learning techniques. Our website
+      contains numerous pages, each dedicated to a specific problem statement.
+      To get started, simply select the problem statement you're interested in
+      and you'll be taken to a page with all the information you need, including
+      the values required to make a prediction. Simply enter the values in the
+      form and you'll receive instant results. With the Prediction Center, you
+      can easily and quickly solve problems using the power of machine learning.
+      So why wait? Start exploring and solving problems today!
+    </h6>
+  </div>
+  <div id="predvec">
+    <img src="{{url_for('static', path='images\predvector2.png')}}" alt="Prediction" width="500" height="500" />
+  </div>
+</section>
+<hr />
+<section id="predictions">
+  <div id="predheading">
+    <h3>Problem Statements</h3>
+  </div>
+  <div id="cardcontainer">
+    <div class="card">
+      <div class="probphot">
+        <img src="{{url_for('static', path='images\calories.png')}}" alt="Calories Burnt Prediction" class="problemphoto" width="200"  height="200" />
+      </div>
+      <div class="modelname">
+        <h5>Calories Burnt Prediction</h5>
+      </div>
+      <div class="probstatement">
+        Calculating the number of calories burned during exercise is an
+        important part of maintaining a healthy lifestyle. While modern devices
+        can help with this, they may not be accessible to everyone. This model
+        allows anyone to easily predict their calorie burn during a specified
+        time period, helping them track their progress and improve their
+        fitness.
+      </div>
+    </div>
+    <div class="card">
+      <div class="probphot">
+        <img
+          src="{{url_for('static', path='images\Diabetes.png')}}" alt="Diabetese Prediction" class="problemphoto"
+          width="200"
+          height="200"
+        />
+      </div>
+      <div class="modelname">
+        <h5>Diabetese Prediction</h5>
+      </div>
+      <div class="probstatement">
+        Diabetes is a metabolic disorder characterized by high blood sugar
+        levels over a prolonged period of time. It is often linked to lifestyle
+        factors. To make it easier for people to determine if they have
+        diabetes, we have created a system that allows them to enter their data
+        and receive a prediction about whether they have diabetes or not. This
+        system is not meant to replace doctors, but rather to provide them with
+        a better understanding of the problem.
+      </div>
+    </div>
+    <div class="card">
+      <div class="probphot">
+        <img
+          src="{{url_for('static', path='images\laptopprice.png')}}"
+          alt="Laptop Price Prediction"
+          class="problemphoto"
+          width="200"
+          height="200"
+        />
+      </div>
+      <div class="modelname">
+        <h5>Laptop Price Prediction</h5>
+      </div>
+      <div class="probstatement">
+        It is easy to get tricked into paying too much for a laptop in an
+        electronic market. This tool uses data on laptop specs to predict the
+        price of a specific laptop, helping buyers avoid overpaying and shop
+        owners prove their prices are fair.
+      </div>
+    </div>
+  </div>
+</section>
+<hr />
+<section id="aboutus">
+  <div id="aboutheading">
+    <h3>About Us</h3>
+  </div>
+  <div id="aboutcontainer">
+    <div id="content">
+      <div id="name">
+        <h4>Ankit Gaur</h4>
+      </div>
+      <div id="about">
+        I am a student pursuing the final year of the bachelor of technology
+        with a specialization in Computer science and engineering from Bhagwan
+        Parshuram Institute of technology. I have a keen interest in Machine
+        learning, Data analytics and Web development I was fortunate enough to
+        get some internships in the field. I was also part of code flux and iosd
+        college society as Machine learning and AI Head I made interactive
+        sessions with students to make their apatite towards Data analytics and
+        Machine learning. I was also part Drishti social service club of our
+        college there as a member of the sponsorship and collaboration dept I
+        came to know the importance of communication. lastly, I am also part of
+        the cultural commeti of my college as technical events head. Through all
+        my experience till now I was able to understand the importance of
+        teamwork, communication anddelivering on time.
+      </div>
+      <div id="sociallink"></div>
+    </div>
+    <div id="mephoto">
+      <img
+        src="{{url_for('static', path='images\mephoto.jpeg')}}"
+        alt="Mephoto"
+        class="problemphoto"
+        width="200"
+        height="200"
+      />
+    </div>
+  </div>
+</section>
+{% endblock content %}

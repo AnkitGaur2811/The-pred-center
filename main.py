@@ -22,10 +22,3 @@ def start_app():
     return app
     
 app = start_app()
-
-# Home route
-@app.get("/")
-def home():
-    return {"Message":"Helloworld"}
-
-# 

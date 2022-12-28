@@ -9,3 +9,15 @@ general_pages_router = APIRouter()
 @general_pages_router.get("/")
 async def home(request:Request):
     return templates.TemplateResponse("gernal_pages/homepage.html",{"request":request})
+
+@general_pages_router.get("/caloriesburnt")
+async def caloriesburnt(request:Request):
+    return templates.TemplateResponse("gernal_pages/caloriesburntpred.html",{"request":request})
+
+@general_pages_router.get("/diabetese")
+async def diabetese(request:Request):
+    return templates.TemplateResponse("gernal_pages/diabetesepred.html",{"request":request})
+
+@general_pages_router.get("/laptopprice")
+async def laptopprice(request:Request):
+    return templates.TemplateResponse("gernal_pages/laptoppricepred.html",{"request":request})

@@ -1,0 +1,143 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+/* section 1 pred center */
+#predcenter{
+    display: flex;
+    align-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ECDBBA;
+}
+#heading{
+    font-size: 5rem;
+    padding:1rem;
+    margin: 0.5rem;
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+}
+#problem{
+    text-align: justify;
+    padding:1rem;
+    margin: 0.5rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5rem;
+}
+/* section2 predictions */
+#predictions{
+    background-color: #ECDBBA;
+}
+#predheading{
+    text-align: center;
+    margin:1.5rem;
+    padding: 1rem;
+    margin-bottom: 0rem;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 4rem;
+}
+#cardcontainer{
+    display: flex;
+    align-content:space-around;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 2rem;
+    margin: 1rem;
+    margin-top: 0rem;
+}
+.card{
+    width: 33%;
+    height: 35rem;
+    margin:0.5rem;
+    padding: 1rem;
+    border-radius:2rem;
+    color: white;
+}
+.probphot{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+.modelname{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+#card1{
+    background-color: #C84B31;
+}
+#card2{
+    background-color: #346751;
+    color: white;
+}
+#card3{
+    background-color: #C84B31;
+}
+.predictbtn{
+    background-color: #161616 !important;
+    color: white;
+    font-weight: bold;
+}
+.predictbtn:hover{
+    background-color: white !important;
+    color: black;
+}
+
+/* section3 about us */
+#aboutus{
+    background-color: #346751;
+    color:white;
+}
+#aboutheading{
+    text-align: center;
+    margin:1.5rem;
+    padding: 1rem;
+    margin-bottom: 0rem;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 4rem;
+}
+#aboutcontainer{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 2rem;
+    margin: 1.5rem;
+    margin-top: 0rem;
+    padding-top: 0.5rem;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#name{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.5rem;
+    text-align: center; 
+}
+.mephoto{
+    border-radius: 2rem;
+    padding: 0;
+    margin: 1rem;
+}
+
+
+/* Media query */
+@media (max-width: 1100px) {
+    #predcenter{
+        flex-direction: column;
+    }
+    #cardcontainer{
+        flex-direction: column;
+    }
+    #aboutcontainer{
+        flex-direction: column;
+    }
+    .card{
+        width: auto;
+        height: auto;
+       
+    }
+}
+  

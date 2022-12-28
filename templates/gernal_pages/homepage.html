@@ -3,8 +3,7 @@
 
 <!-- CSS block -->
 {% block CSS %}
-<link
-  href="{{ url_for('static', path='css/homepage.css') }}"  rel="stylesheet"/>
+<link  href="{{ url_for('static', path='css\homepage.css') }}"  rel="stylesheet"/>
 {% endblock CSS%}
 
 <!-- title block -->
@@ -31,35 +30,15 @@
     <img src="{{url_for('static', path='images\predvector2.png')}}" alt="Prediction" width="500" height="500" />
   </div>
 </section>
-<hr />
 <section id="predictions">
   <div id="predheading">
     <h3>Problem Statements</h3>
   </div>
   <div id="cardcontainer">
-    <div class="card">
-      <div class="probphot">
-        <img src="{{url_for('static', path='images\calories.png')}}" alt="Calories Burnt Prediction" class="problemphoto" width="200"  height="200" />
-      </div>
-      <div class="modelname">
-        <h5>Calories Burnt Prediction</h5>
-      </div>
-      <div class="probstatement">
-        Calculating the number of calories burned during exercise is an
-        important part of maintaining a healthy lifestyle. While modern devices
-        can help with this, they may not be accessible to everyone. This model
-        allows anyone to easily predict their calorie burn during a specified
-        time period, helping them track their progress and improve their
-        fitness.
-      </div>
-    </div>
-    <div class="card">
+    <div id = "card1" class="card">
       <div class="probphot">
         <img
-          src="{{url_for('static', path='images\Diabetes.png')}}" alt="Diabetese Prediction" class="problemphoto"
-          width="200"
-          height="200"
-        />
+          src="{{url_for('static', path='images\Diabetes.png')}}" alt="Diabetese Prediction" class="problemphoto" width="200" height="200"/>
       </div>
       <div class="modelname">
         <h5>Diabetese Prediction</h5>
@@ -73,16 +52,29 @@
         system is not meant to replace doctors, but rather to provide them with
         a better understanding of the problem.
       </div>
+      <a href="{{url_for('diabetese')}}" class="btn btn-secondary btn-lg active predictbtn" role="button" aria-pressed="true">Predict Now!</a>
     </div>
-    <div class="card">
+    <div id = "card2"class="card">
+        <div class="probphot">
+          <img src="{{url_for('static', path='images\calories.png')}}" alt="Calories Burnt Prediction" class="problemphoto" width="200"  height="200" />
+        </div>
+        <div class="modelname">
+          <h5>Calories Burnt Prediction</h5>
+        </div>
+        <div class="probstatement">
+          Calculating the number of calories burned during exercise is an
+          important part of maintaining a healthy lifestyle. While modern devices
+          can help with this, they may not be accessible to everyone. This model
+          allows anyone to easily predict their calorie burn during a specified
+          time period, helping them track their progress and improve their
+          fitness.
+        </div>
+        <a href="{{url_for('caloriesburnt')}}" class="btn btn-secondary btn-lg active predictbtn" role="button" aria-pressed="true">Predict Now!</a>
+      </div>
+    <div id = "card3"class="card">
       <div class="probphot">
         <img
-          src="{{url_for('static', path='images\laptopprice.png')}}"
-          alt="Laptop Price Prediction"
-          class="problemphoto"
-          width="200"
-          height="200"
-        />
+          src="{{url_for('static', path='images\laptopprice.png')}}"alt="Laptop Price Prediction"class="problemphoto"width="200"height="200"/>
       </div>
       <div class="modelname">
         <h5>Laptop Price Prediction</h5>
@@ -93,10 +85,10 @@
         price of a specific laptop, helping buyers avoid overpaying and shop
         owners prove their prices are fair.
       </div>
+      <a href="{{url_for('laptopprice')}}" class="btn btn-secondary btn-lg active predictbtn" role="button" aria-pressed="true">Predict Now!</a>
     </div>
   </div>
 </section>
-<hr />
 <section id="aboutus">
   <div id="aboutheading">
     <h3>About Us</h3>
@@ -119,7 +111,7 @@
         came to know the importance of communication. lastly, I am also part of
         the cultural commeti of my college as technical events head. Through all
         my experience till now I was able to understand the importance of
-        teamwork, communication anddelivering on time.
+        teamwork, communication and delivering on time.
       </div>
       <div id="sociallink"></div>
     </div>
@@ -127,7 +119,7 @@
       <img
         src="{{url_for('static', path='images\mephoto.jpeg')}}"
         alt="Mephoto"
-        class="problemphoto"
+        class="mephoto"
         width="200"
         height="200"
       />

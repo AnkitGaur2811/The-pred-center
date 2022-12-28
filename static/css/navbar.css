@@ -14,16 +14,27 @@
     font-family: 'Prosto One', cursive;
     color: white;
 }
+.predname:hover{
+    color: white;
+}
 /* navbar item (home etc.) */
 .navbaritem{
     font-family: 'Bitter', serif;
     font-weight:500;
     border-radius: 1rem;
+    color: white !important;
+}
+.dropitem{
     color: white;
 }
 .navbaritem:hover{
     background-color:#ECDBBA;
+    color: black !important;
 }
 .dropitem:hover{
     background-color:#ECDBBA;
+    color: black;
+}
+.costom{
+    background-color: white;
 }

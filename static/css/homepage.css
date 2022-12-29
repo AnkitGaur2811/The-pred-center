@@ -51,6 +51,8 @@
     padding: 1rem;
     border-radius:2rem;
     color: white;
+    display: flex;
+    justify-content: space-between;
 }
 .probphot{
     display: flex;
@@ -62,6 +64,9 @@
     font-family: 'Libre Baskerville', serif;
     font-size: 2.5rem;
     text-align: center;
+}
+.probstatement{
+    text-align:justify;
 }
 #card1{
     background-color: #C84B31;

@@ -1,0 +1,39 @@
+/* fonts */
+/* Section 1 Modelhead */
+#Modelhead{
+    background-color: #ECDBBA;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#writtencontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#name{
+    font-size: 5rem;
+}
+#statement{
+    padding: 2rem;
+}
+
+/* Section 2 Modelvalues */
+#modelvalues{
+    background-color: #ECDBBA;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section 3 Modelform */
+#modelform{
+    background-color: #ECDBBA;
+}
+
+/* Section 4 Result */
+#result{
+    background-color: #ECDBBA;
+}

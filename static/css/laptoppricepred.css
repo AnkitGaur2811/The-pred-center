@@ -21,19 +21,87 @@
 
 /* Section 2 Modelvalues */
 #modelvalues{
+    background-color: #C84B31;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+#valueheading{
+    color: white;
+    padding-top: 1.2rem;
+}
+
+/* Section 3 Modelform */
+#modelform{
     background-color: #ECDBBA;
     display: flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
 }
-
-/* Section 3 Modelform */
-#modelform{
-    background-color: #ECDBBA;
+#formtitle{
+    /* for fonts and colour */
+    font-size: large;
 }
+.forminput{
+    display: flex;
+    justify-content:space-between;
+}
+.forminput label{
+    margin: 0rem 2rem;
+    padding: 0.5rem 1.5rem;
+}
+.forminput select{
+    margin: 0.5rem 2rem;
+    padding: 0rem 1.5rem;
+    width:20rem;
+    height:auto;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px 2px #346751;
+}
+.forminput input{
+    margin: 0.5rem 2rem;
+    padding: 0rem 1.5rem;
+    width: 20rem;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px 2px #346751;
+}
+#submitbton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#submitbton input{
+    width: 90%;
+    background-color:#346751;
+    color: white;
+    border-radius: 1rem;
+}
+
 
 /* Section 4 Result */
 #result{
     background-color: #ECDBBA;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.predictbtn{
+    background-color: #161616 !important;
+    color: white;
+    font-weight: bold;
+}
+.predictbtn:hover{
+    background-color: white !important;
+    color: black;
+}
+#message{
+    font-size: 1.2rem;
+}
+#finalresult{
+    font-weight:bold;
+    font-size: 2rem;
 }

@@ -3,7 +3,10 @@
 
 <!-- CSS block -->
 {% block CSS %}
-<link  href="{{ url_for('static', path='css\laptoppricepred.css') }}"  rel="stylesheet"/>
+<link
+  href="{{ url_for('static', path='css\laptoppricepred.css') }}"
+  rel="stylesheet"
+/>
 {% endblock CSS%}
 
 <!-- title block -->
@@ -12,270 +15,281 @@
 <!-- Content block -->
 {% block content %}
 <section id="Modelhead">
-    <div id="writtencontent">
-        <h2 id="name">
-            Laptop Price Prediction
-        </h2>
-        <div id="statement">
-            It is easy to get tricked into paying too much for a laptop in an
-        electronic market. This tool uses data on laptop specs to predict the
-        price of a specific laptop, helping buyers avoid overpaying and shop
-        owners prove their prices are fair.
-        </div>
+  <div id="writtencontent">
+    <h2 id="name">Laptop Price Prediction</h2>
+    <div id="statement">
+      It is easy to get tricked into paying too much for a laptop in an
+      electronic market. This tool uses data on laptop specs to predict the
+      price of a specific laptop, helping buyers avoid overpaying and shop
+      owners prove their prices are fair.
     </div>
-    <div id="modelphoto">
-        <img src="{{url_for('static', path='images\laptopprice.png')}}"alt="Laptop Price Prediction"class="problemphoto"width="550" height="400"/>
-    </div>
+  </div>
+  <div id="modelphoto">
+    <img
+      src="{{url_for('static', path='images\laptopprice.png')}}"
+      alt="Laptop Price Prediction"
+      class="problemphoto"
+      width="550"
+      height="400"
+    />
+  </div>
 </section>
-<hr>
 <section id="modelvalues">
-    <div id="valueheading">
-        <h3>Values To Be Enterd For Predictions</h3>
-    </div>
-    <div id="valuetable">
-        <table class="table table-dark table-hover table-bordered ">
-            <caption>Values to be Entered</caption>
-            <thead>
-                <tr>
-                    <th scope="col">S.no.</th>
-                    <th scope="col">Label</th>
-                    <th scope="col">Value To Be Added</th>
-                </tr>
-            </thead>
-            <tbody class="table-group-divider">
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Brand</td>
-                    <td>The company of the laptop whoes price you want to know</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Type</td>
-                    <td>What type of that particular laptop is for example notebook, gaming etc.</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>RAM</td>
-                    <td>Size of RAM in GB</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Weight</td>
-                    <td>Weight of the laptop</td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>TouchScreen</td>
-                    <td>Is the laptop Touch Screen?</td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td>IPS</td>
-                    <td>Is laptop is having IPS display?</td>
-                </tr>
-                <tr>
-                    <th scope="row">7</th>
-                    <td>Screen Size</td>
-                    <td>What is resolution of the laptop</td>
-                </tr>
-                <tr>
-                    <th scope="row">8</th>
-                    <td>CPU</td>
-                    <td>CPU brand</td>
-                </tr>
-                <tr>
-                    <th scope="row">9</th>
-                    <td>HDD</td>
-                    <td>Size of HDD in GB</td>
-                </tr>
-                <tr>
-                    <th scope="row">10</th>
-                    <td>SSD</td>
-                    <td>Size of SSD in GB</td>
-                </tr>
-                <tr>
-                    <th scope="row">11</th>
-                    <td>GPU</td>
-                    <td>GPU Brand</td>
-                </tr>
-                <tr>
-                    <th scope="row">12</th>
-                    <td>OS</td>
-                    <td>Select Operationg System</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+  <div id="valueheading">
+    <h3>Values To Be Entered For Predictions</h3>
+  </div>
+  <div id="valuetable">
+    <table class="table table-dark table-hover table-bordered">
+      <caption>
+        Values to be Entered
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">S.no.</th>
+          <th scope="col">Label</th>
+          <th scope="col">Value To Be Added</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr>
+          <th scope="row">1</th>
+          <td>Brand</td>
+          <td>The company of the laptop whoes price you want to know</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Type</td>
+          <td>
+            What type of that particular laptop is for example notebook, gaming
+            etc.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>RAM</td>
+          <td>Size of RAM in GB</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Weight</td>
+          <td>Weight of the laptop</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>TouchScreen</td>
+          <td>Is the laptop Touch Screen?</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>IPS</td>
+          <td>Is laptop is having IPS display?</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Screen Size</td>
+          <td>What is Size of the screen in inches</td>
+        </tr>
+        <tr>
+            <th scope="row">7</th>
+            <td>Resolution</td>
+            <td>What is resolution of the laptop</td>
+          </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td>CPU</td>
+          <td>CPU brand</td>
+        </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td>HDD</td>
+          <td>Size of HDD in GB</td>
+        </tr>
+        <tr>
+          <th scope="row">10</th>
+          <td>SSD</td>
+          <td>Size of SSD in GB</td>
+        </tr>
+        <tr>
+          <th scope="row">11</th>
+          <td>GPU</td>
+          <td>GPU Brand</td>
+        </tr>
+        <tr>
+          <th scope="row">12</th>
+          <td>OS</td>
+          <td>Select Operationg System</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
-<hr>
-<section id="modelform">
+{% if Result == -1 %}
+    <section id="modelform">
     <div id="formtitle">
-        <h3>
-            Laptop Price Prediction
-        </h3>
+        <h3>Laptop Price Prediction</h3>
     </div>
     <div id="actualform">
         <form action="/laptoppricepredsubmit" method="post" id="priceform">
-            <div class="forminput">
-                <label for="Brand">Brand:</label>
-                <select name="Brand" id="Brand">
-                    <option value="">Enter the Brand of laptop</option>
-                    <option value="Apple">Apple</option>
-                    <option value="HP">HP</option>
-                    <option value="Acer">Acer</option>
-                    <option value="Asus">Asus</option>
-                    <option value="Dell">Dell</option>
-                    <option value="Lenovo">Lenovo</option>
-                    <option value="Chuwi">Chuwi</option>
-                    <option value="MSI">MSI</option>
-                    <option value="Microsoft">Microsoft</option>
-                    <option value="Toshiba">Toshiba</option>
-                    <option value="Huawei">Huawei</option>
-                    <option value="Xiaomi">Xiaomi</option>
-                    <option value="Vero">Vero</option>
-                    <option value="Razer">Razer</option>
-                    <option value="Mediacom">Mediacom</option>
-                    <option value="Samsung">Samsung</option>
-                    <option value="Google">Google</option>
-                    <option value="Fujitsu">Fujitsu</option>
-                    <option value="LG">LG</option>
-                </select>
-            </div>
-            <div class="forminput">
-                <label for="Type">Type:</label>
-                <select name="Type" id="Type">
-                    <option value="">Enter the Type of laptop</option>
-                    <option value="Ultrabook">Ultrabook</option>
-                    <option value="Notebook">Notebook</option>
-                    <option value="Netbook">Netbook</option>
-                    <option value="Gaming">Gaming</option>
-                    <option value="2 in 1 Convertible">2 in 1 Convertible</option>
-                    <option value="Workstation">Workstation</option>
-                </select>
-            </div>
-            <div class="forminput">
-                <label for="RAM">RAM(in GB):</label>
-                <select name="RAM" id="RAM">
-                    <option value="">RAM Size in GB</option>
-                    <option value="2">2</option>
-                    <option value="4">4</option>
-                    <option value="6">6</option>
-                    <option value="8">8</option>
-                    <option value="12">12</option>
-                    <option value="16">16</option>
-                    <option value="24">24</option>
-                    <option value="32">32</option>
-                    <option value="64">64</option>
-                </select>
-            </div>
-            <div class="forminput">
-                <label for="Weight">Weight:</label>
-                <input type="number" id="Weight" name="Weight" step="any">
-            </div>
-            <div class="forminput">
-                <label for="TouchScreen">TouchScreen:</label>
-                <select name="TouchScreen" id="TouchScreen">
-                    <option value="">Is laptop touch Screen?</option>
-                    <option value="1">Yes</option>
-                    <option value="0">No</option>
-                </select>
-            </div>
-            <div class="forminput">
-                <label for="IPS">IPS:</label>
-                <select name="IPS" id="IPS">
-                    <option value="">Have IPS display?</option>
-                    <option value="1">Yes</option>
-                    <option value="0">No</option>
-                </select>
-            </div>
-            <div class="forminput">
-                <label for="ScreenSize">ScreenSize:</label>
-                <input type="number" id="ScreenSize" name="ScreenSize">
-            </div>
-            <div class="forminput">
-                <label for="Resolution">Resolution:</label>
-                <select name="Resolution" id="Resolution">
-                    <option value="">Enter Resolution of laptop</option>
-                    <option value="1920x1080">1920x1080</option>
-                    <option value="1366x768">1366x768</option>
-                    <option value="1600x900">1600x900</option>
-                    <option value="3840x2160">3840x2160</option>
-                    <option value="3200x1800">3200x1800</option>
-                    <option value="2880x1800">2880x1800</option>
-                    <option value="2560x1600">2560x1600</option>
-                    <option value="2560x1440">2560x1440</option>
-                    <option value="2304x1440">2304x1440</option>
-                </select>
-            </div>
-            <div class="forminput">
-                <label for="CPU">CPU Brand:</label>
-                <select name="CPU" id="CPU">
-                    <option value="">Enter the CPU Brand of laptop</option>
-                    <option value="Intel Core i5">Intel Core i5</option>
-                    <option value="Intel Core i7">Intel Core i7</option>
-                    <option value="Intel Core i3">Intel Core i3</option>
-                    <option value="AMD Processor">AMD Processor</option>
-                    <option value="Other Intel Processor">Other Intel Processor</option>
-                </select>
-            </div>
-            <div class="forminput">
-                <label for="HDD">HDD(in GB):</label>
-                <select name="HDD" id="HDD">
-                    <option value="">Enter Size of HDD</option>
-                    <option value="0">0</option>
-                    <option value="128">128</option>
-                    <option value="256">256</option>
-                    <option value="512">512</option>
-                    <option value="1024">1024</option>
-                    <option value="2048">2048</option>
-                </select>
-            </div>
-            <div class="forminput">
-                <label for="SSD">SSD(in GB):</label>
-                <select name="SSD" id="SSD">
-                    <option value="">Enter SIze of SSD</option>
-                    <option value="0">0</option>
-                    <option value="8">8</option>
-                    <option value="128">128</option>
-                    <option value="256">256</option>
-                    <option value="512">512</option>
-                    <option value="1024">1024</option>
-                </select>
-            </div>
-            <div class="forminput">
-                <label for="GPU">GPU Brand:</label>
-                <select name="GPU" id="GPU">
-                    <option value="">Enter the GPU Brand of laptop</option>
-                    <option value="Intel">Intel</option>
-                    <option value="AMD">AMD</option>
-                    <option value="Nvidia">Nvidia</option>
-                </select>
-            </div>
-            <div class="forminput">
-                <label for="OS">Operating System:</label>
-                <select name="OS" id="OS">
-                    <option value="">Enter the OS</option>
-                    <option value="Mac">Mac</option>
-                    <option value="Windows">Windows</option>
-                    <option value="Others/No OS/Linux">Others/No OS/Linux</option>
-                </select>
-            </div> 
-            <div id="submitbton">
-                <input type="submit" value="Submit">
-            </div>
+        <div class="forminput">
+            <label for="Brand">Brand:</label>
+            <select name="Brand" id="Brand">
+            <option value="">Enter the Brand of laptop</option>
+            <option value="Apple">Apple</option>
+            <option value="HP">HP</option>
+            <option value="Acer">Acer</option>
+            <option value="Asus">Asus</option>
+            <option value="Dell">Dell</option>
+            <option value="Lenovo">Lenovo</option>
+            <option value="Chuwi">Chuwi</option>
+            <option value="MSI">MSI</option>
+            <option value="Microsoft">Microsoft</option>
+            <option value="Toshiba">Toshiba</option>
+            <option value="Huawei">Huawei</option>
+            <option value="Xiaomi">Xiaomi</option>
+            <option value="Vero">Vero</option>
+            <option value="Razer">Razer</option>
+            <option value="Mediacom">Mediacom</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Google">Google</option>
+            <option value="Fujitsu">Fujitsu</option>
+            <option value="LG">LG</option>
+            </select>
+        </div>
+        <div class="forminput">
+            <label for="Type">Type:</label>
+            <select name="Type" id="Type">
+            <option value="">Enter the Type of laptop</option>
+            <option value="Ultrabook">Ultrabook</option>
+            <option value="Notebook">Notebook</option>
+            <option value="Netbook">Netbook</option>
+            <option value="Gaming">Gaming</option>
+            <option value="2 in 1 Convertible">2 in 1 Convertible</option>
+            <option value="Workstation">Workstation</option>
+            </select>
+        </div>
+        <div class="forminput">
+            <label for="RAM">RAM(in GB):</label>
+            <select name="RAM" id="RAM">
+            <option value="">RAM Size in GB</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+            <option value="12">12</option>
+            <option value="16">16</option>
+            <option value="24">24</option>
+            <option value="32">32</option>
+            <option value="64">64</option>
+            </select>
+        </div>
+        <div class="forminput">
+            <label for="Weight">Weight(in Kg):</label>
+            <input type="number" id="Weight" name="Weight" step=".25"  min ="0"/>
+        </div>
+        <div class="forminput">
+            <label for="TouchScreen">TouchScreen:</label>
+            <select name="TouchScreen" id="TouchScreen">
+            <option value="">Is laptop touch Screen?</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+            </select>
+        </div>
+        <div class="forminput">
+            <label for="IPS">IPS:</label>
+            <select name="IPS" id="IPS">
+            <option value="">Have IPS display?</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+            </select>
+        </div>
+        <div class="forminput">
+            <label for="ScreenSize">ScreenSize(in Inches):</label>
+            <input type="number" id="ScreenSize" name="ScreenSize" min = "10" />
+        </div>
+        <div class="forminput">
+            <label for="Resolution">Resolution:</label>
+            <select name="Resolution" id="Resolution">
+            <option value="">Enter Resolution of laptop</option>
+            <option value="1920x1080">1920x1080</option>
+            <option value="1366x768">1366x768</option>
+            <option value="1600x900">1600x900</option>
+            <option value="3840x2160">3840x2160</option>
+            <option value="3200x1800">3200x1800</option>
+            <option value="2880x1800">2880x1800</option>
+            <option value="2560x1600">2560x1600</option>
+            <option value="2560x1440">2560x1440</option>
+            <option value="2304x1440">2304x1440</option>
+            </select>
+        </div>
+        <div class="forminput">
+            <label for="CPU">CPU Brand:</label>
+            <select name="CPU" id="CPU">
+            <option value="">Enter the CPU Brand of laptop</option>
+            <option value="Intel Core i5">Intel Core i5</option>
+            <option value="Intel Core i7">Intel Core i7</option>
+            <option value="Intel Core i3">Intel Core i3</option>
+            <option value="AMD Processor">AMD Processor</option>
+            <option value="Other Intel Processor">Other Intel Processor</option>
+            </select>
+        </div>
+        <div class="forminput">
+            <label for="HDD">HDD(in GB):</label>
+            <select name="HDD" id="HDD">
+            <option value="">Enter Size of HDD</option>
+            <option value="0">0</option>
+            <option value="128">128</option>
+            <option value="256">256</option>
+            <option value="512">512</option>
+            <option value="1024">1024</option>
+            <option value="2048">2048</option>
+            </select>
+        </div>
+        <div class="forminput">
+            <label for="SSD">SSD(in GB):</label>
+            <select name="SSD" id="SSD">
+            <option value="">Enter SIze of SSD</option>
+            <option value="0">0</option>
+            <option value="8">8</option>
+            <option value="128">128</option>
+            <option value="256">256</option>
+            <option value="512">512</option>
+            <option value="1024">1024</option>
+            </select>
+        </div>
+        <div class="forminput">
+            <label for="GPU">GPU Brand:</label>
+            <select name="GPU" id="GPU">
+            <option value="">Enter the GPU Brand of laptop</option>
+            <option value="Intel">Intel</option>
+            <option value="AMD">AMD</option>
+            <option value="Nvidia">Nvidia</option>
+            </select>
+        </div>
+        <div class="forminput">
+            <label for="OS">Operating System:</label>
+            <select name="OS" id="OS">
+            <option value="">Enter the OS</option>
+            <option value="Mac">Mac</option>
+            <option value="Windows">Windows</option>
+            <option value="Others/No OS/Linux">Others/No OS/Linux</option>
+            </select>
+        </div>
+        <div id="submitbton">
+            <input type="submit" value="Predict" />
+        </div>
         </form>
     </div>
-</section>
-<hr>
-<section id="result">
+    </section>
+{% endif %}
+{% if Result!= -1 %}
+    <section id="result">
     <div id="reshead">
         <h3>Result</h3>
     </div>
-    <div id="message">
-        The Price of the Laptop you entered is :
+    <div id="message">The Price of the Laptop you entered is :</div>
+    <div id="finalresult">&#x20B9;{{Result}}</div>
+    <div class="gobackbtn">
+        <a href="{{url_for('laptopprice')}}" class="btn btn-secondary btn-lg active predictbtn" role="button" >Predict Another Now!</a>
     </div>
-    <div id="finalresult">
-        {{Result}}
-    </div>
-</section>
-{% endblock content %}
+    </section>
+{% endif %} {% endblock content %}

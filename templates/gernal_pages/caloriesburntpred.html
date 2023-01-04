@@ -1,2 +1,145 @@
 <!-- Extends base -->
 {% extends 'shared/base.html' %}
+
+<!-- CSS block -->
+{% block CSS %}
+<link href="{{ url_for('static', path='css\mlmodel.css') }}" rel="stylesheet"/>
+{% endblock CSS%}
+
+<!-- title block -->
+{% block title %} Calories Burnt Prediction {% endblock title %}
+
+<!-- Content block -->
+{% block content %}
+<section id="Modelhead">
+  <div id="writtencontent">
+    <h2 id="name">Calories Burnt Prediction</h2>
+    <div id="statement">
+        Calculating the number of calories burned during exercise is an
+        important part of maintaining a healthy lifestyle. While modern devices
+        can help with this, they may not be accessible to everyone. This model
+        allows anyone to easily predict their calorie burn during a specified
+        time period, helping them track their progress and improve their
+        fitness.
+    </div>
+  </div>
+  <div id="modelphoto">
+    <img src="{{url_for('static', path='images\calories.png')}}" alt="Calories Burnt Prediction" class="problemphoto" width="400" height="500"
+    />
+  </div>
+</section>
+<section id="modelvalues">
+  <div id="valueheading">
+    <h3>Values To Be Entered For Predictions</h3>
+  </div>
+  <div id="valuetable">
+    <table class="table table-dark table-hover table-bordered">
+      <caption>
+        Values to be Entered
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">S.no.</th>
+          <th scope="col">Label</th>
+          <th scope="col">Value To Be Added</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr>
+            <!-- Gender	Age	Height	Weight	Duration	Heart_Rate	Body_Temp -->
+          <th scope="row">1</th>
+          <td>Gender</td>
+          <td>Gender of the person doing the exercise</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Age (in years)</td>
+          <td>Age of the person doing the exercise</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Height (in Cm)</td>
+          <td>Height of the person doing the exercise</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Weight (in Kgs)</td>
+          <td>Weight of the person doing the exercise</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Duration</td>
+          <td>Duration of the exercise</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>Heart Rate</td>
+          <td>Heart Rate of the person doing exercise</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Body Temp</td>
+          <td>Body Temp of the person doing exercise</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+{% if Result == -1 %}
+    <section id="modelform">
+    <div id="formtitle">
+        <h3>Calories Burnt Prediction</h3>
+    </div>
+    <div id="actualform">
+        <form action="/caloriesburnsubmit" method="post" id="calburnform">
+        <div class="forminput">
+            <label for="Gender">Gender:</label>
+            <select name="Gender" id="Gender">
+            <option value="">Enter Gender of the person</option>
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+            </select>
+        </div>
+        <div class="forminput">
+            <label for="Age">Age(in Years):</label>
+            <input type="number" id="Age" name="Age" step="any"  min ="0"/>
+        </div>
+        <div class="forminput">
+            <label for="Height">Height(in Cm):</label>
+            <input type="number" id="Height" name="Height" step="any"  min ="0"/>
+        </div>
+        <div class="forminput">
+            <label for="Weight">Weight(in Kg):</label>
+            <input type="number" id="Weight" name="Weight" step="any"  min ="0"/>
+        </div>
+        <div class="forminput">
+            <label for="Duration">Duration of the exercise:</label>
+            <input type="number" id="Duration" name="Duration" step="any"  min ="0"/>
+        </div>
+        <div class="forminput">
+            <label for="HeartRate">Heart Rate of the person:</label>
+            <input type="number" id="HeartRate" name="HeartRate" step="any"  min ="0"/>
+        </div>
+        <div class="forminput">
+            <label for="BodyTemp">Body Temp of the person:</label>
+            <input type="number" id="BodyTemp" name="BodyTemp" step="any"  min ="0"/>
+        </div>
+        <div id="submitbton">
+            <input type="submit" value="Predict" />
+        </div>
+        </form>
+    </div>
+    </section>
+{% endif %}
+{% if Result!= -1 %}
+    <section id="result">
+    <div id="reshead">
+        <h3>Result</h3>
+    </div>
+    <div id="message">The Calories You Burnt During Exercise is :</div>
+    <div id="finalresult">&#x20B9;{{Result}}</div>
+    <div class="gobackbtn">
+        <a href="{{url_for('caloriesburnt')}}" class="btn btn-secondary btn-lg active predictbtn" role="button" >Predict Another Now!</a>
+    </div>
+    </section>
+{% endif %} {% endblock content %}

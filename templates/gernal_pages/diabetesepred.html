@@ -1,2 +1,145 @@
 <!-- Extends base -->
 {% extends 'shared/base.html' %}
+
+<!-- CSS block -->
+{% block CSS %}
+<link href="{{ url_for('static', path='css\mlmodel.css') }}" rel="stylesheet"/>
+{% endblock CSS%}
+
+<!-- title block -->
+{% block title %} Diabetese Prediction {% endblock title %}
+
+<!-- Content block -->
+{% block content %}
+<section id="Modelhead">
+  <div id="writtencontent">
+    <h2 id="name">Diabetese Prediction</h2>
+    <div id="statement">
+        Diabetes is a metabolic disorder characterized by high blood sugar
+        levels over a prolonged period of time. It is often linked to lifestyle
+        factors. To make it easier for people to determine if they have
+        diabetes, we have created a system that allows them to enter their data
+        and receive a prediction about whether they have diabetes or not. This
+        system is not meant to replace doctors, but rather to provide them with
+        a better understanding of the problem.
+    </div>
+  </div>
+  <div id="modelphoto">
+    <img src="{{url_for('static', path='images\Diabetes.png')}}" alt="Diabetese Prediction" class="problemphoto" width="400" height="500"
+    />
+  </div>
+</section>
+<section id="modelvalues">
+  <div id="valueheading">
+    <h3>Values To Be Entered For Predictions</h3>
+  </div>
+  <div id="valuetable">
+    <table class="table table-dark table-hover table-bordered">
+      <caption>
+        Values to be Entered
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">S.no.</th>
+          <th scope="col">Label</th>
+          <th scope="col">Value To Be Added</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr>
+          <th scope="row">1</th>
+          <td>Pregnancies</td>
+          <td>Number of times pregnant</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Glucose</td>
+          <td>Plasma glucose concentration a 2 hours in an oral glucose tolerance test</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Blood Pressure</td>
+          <td>Diastolic blood pressure (mm Hg)</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Skin Thickness</td>
+          <td> Triceps skin fold thickness (mm)</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>BMI</td>
+          <td> Body mass index (weight in kg/(height in m)^2)</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>Diabetes Pedigree Function</td>
+          <td>Diabetes pedigree function (a function which scores likelihood of diabetes based on family history)</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Age</td>
+          <td> Age of patient (in years)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+{% if Result == "" %}
+    <section id="modelform">
+    <div id="formtitle">
+        <h3>Diabetese Prediction</h3>
+    </div>
+    <div id="actualform">
+        <form action="/diabetesesubmit" method="post" id="diabeteseform">
+        <div class="forminput">
+            <label for="Pregnancies">Pregnancies:</label>
+            <input type="number" id="Pregnancies" name="Pregnancies" step="any"  min ="0"/>
+        </div>
+        <div class="forminput">
+          <label for="Glucose">Glucose:</label>
+          <input type="number" id="Glucose" name="Glucose" step="any"  min ="0"/>
+        </div>
+        <div class="forminput">
+          <label for="BloodPressure">Blood Pressure:</label>
+          <input type="number" id="BloodPressure" name="BloodPressure" step="any"  min ="0"/>
+        </div>
+        <div class="forminput">
+          <label for="SkinThickness">Skin Thickness:</label>
+          <input type="number" id="SkinThickness" name="SkinThickness" step="any"  min ="0"/>
+        </div>
+        <div class="forminput">
+          <label for="Insulin">Insulin:</label>
+          <input type="number" id="Insulin" name="Insulin" step="any"  min ="0"/>
+        </div>
+        <div class="forminput">
+          <label for="BMI">BMI:</label>
+          <input type="number" id="BMI" name="BMI" step="any"  min ="0"/>
+        </div>
+        <div class="forminput">
+          <label for="DPF">Diabetes Pedigree Function:</label>
+          <input type="number" id="DPF" name="DPF" step="any"  min ="0"/>
+        </div>
+        <div class="forminput">
+            <label for="Age">Age(in Years):</label>
+            <input type="number" id="Age" name="Age" step="any"  min ="0"/>
+        </div>
+        <div id="submitbton">
+            <input type="submit" value="Predict" />
+        </div>
+        </form>
+    </div>
+    </section>
+{% endif %}
+{% if Result!= "" %}
+    <section id="result">
+    <div id="reshead">
+        <h3>Result</h3>
+    </div>
+    <div id="message">You are :</div>
+    <div id="finalresult">{{Result}}</div>
+    <div class="gobackbtn">
+        <a href="{{url_for('diabetese')}}" class="btn btn-secondary btn-lg active predictbtn" role="button" >Predict Another Now!</a>
+    </div>
+    </section>
+{% endif %} {% endblock content %}

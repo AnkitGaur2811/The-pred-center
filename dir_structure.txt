@@ -1,0 +1,58 @@
+|--- ./
+    |--- .gitignore
+    |--- dir_structure.txt
+    |--- main.py
+    |--- requirements.txt
+    |--- STP idea.txt
+    |--- structureprint.py
+    |--- apis/
+        --- 
+        |--- general_pages/
+            |--- forms_data.py
+            |--- route_homepage.py
+    |--- core/
+        |--- config.py
+    |--- MachineModels/
+        |--- Calories Burnt Prediction/
+            |--- CalBurnModel.pkl
+            |--- calories.csv
+            |--- Calories_burnt.ipynb
+            |--- exercise.csv
+        |--- Diabetes prediction/
+            |--- diabetes.csv
+            |--- DiabeteseModel.pkl
+            |--- Diabetes_pred.ipynb
+        |--- Laptop Prize prediction/
+            |--- LaptopPrediction.ipynb
+            |--- LaptopPriceModel.pkl
+            |--- laptop_data.csv
+        |--- Loan Status Prediction/
+            |--- Loan_data.csv
+            |--- Loan_status_prediction.ipynb
+    |--- static/
+        |--- css/
+            |--- footer.css
+            |--- homepage.css
+            |--- mlmodel.css
+            |--- navbar.css
+        |--- images/
+            |--- calories.png
+            |--- Diabetes.png
+            |--- laptopprice.png
+            |--- logo.png
+            |--- logo2.png
+            |--- mephoto.jpeg
+            |--- predvector.jpg
+            |--- predvector2.png
+        |--- js/
+    |--- templates/
+        |--- components/
+            |--- footer.html
+            |--- navbar.html
+        |--- gernal_pages/
+            |--- caloriesburntpred.html
+            |--- diabetesepred.html
+            |--- homepage.html
+            |--- laptoppricepred.html
+        |--- shared/
+            |--- base.html

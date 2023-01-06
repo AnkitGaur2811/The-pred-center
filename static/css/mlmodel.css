@@ -1,4 +1,5 @@
 /* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 /* Section 1 Modelhead */
 #Modelhead{
     background-color: #ECDBBA;
@@ -14,9 +15,13 @@
 }
 #name{
     font-size: 5rem;
+    font-family: 'Merriweather', serif;
 }
 #statement{
     padding: 2rem;
+    font-size: 1.5rem;
+    font-family: cursive;
+    text-align: justify;
 }
 
 /* Section 2 Modelvalues */
@@ -47,6 +52,7 @@
 .forminput{
     display: flex;
     justify-content:space-between;
+    font-size: 1.3rem;
 }
 .forminput label{
     margin: 0rem 2rem;
@@ -78,6 +84,8 @@
     background-color:#346751;
     color: white;
     border-radius: 1rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
 }
 
 
@@ -89,10 +97,14 @@
     justify-content: center;
     align-items: center;
 }
+#reshead h3{
+    font-size: 5rem;
+}
 .predictbtn{
     background-color: #161616 !important;
     color: white;
     font-weight: bold;
+    margin-bottom: 1rem;
 }
 .predictbtn:hover{
     background-color: white !important;

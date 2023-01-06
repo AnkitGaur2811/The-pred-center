@@ -29,63 +29,64 @@
     />
   </div>
 </section>
-<section id="modelvalues">
-  <div id="valueheading">
-    <h3>Values To Be Entered For Predictions</h3>
-  </div>
-  <div id="valuetable">
-    <table class="table table-dark table-hover table-bordered">
-      <caption>
-        Values to be Entered
-      </caption>
-      <thead>
-        <tr>
-          <th scope="col">S.no.</th>
-          <th scope="col">Label</th>
-          <th scope="col">Value To Be Added</th>
-        </tr>
-      </thead>
-      <tbody class="table-group-divider">
-        <tr>
-          <th scope="row">1</th>
-          <td>Pregnancies</td>
-          <td>Number of times pregnant</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Glucose</td>
-          <td>Plasma glucose concentration a 2 hours in an oral glucose tolerance test</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Blood Pressure</td>
-          <td>Diastolic blood pressure (mm Hg)</td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>Skin Thickness</td>
-          <td> Triceps skin fold thickness (mm)</td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>BMI</td>
-          <td> Body mass index (weight in kg/(height in m)^2)</td>
-        </tr>
-        <tr>
-          <th scope="row">6</th>
-          <td>Diabetes Pedigree Function</td>
-          <td>Diabetes pedigree function (a function which scores likelihood of diabetes based on family history)</td>
-        </tr>
-        <tr>
-          <th scope="row">7</th>
-          <td>Age</td>
-          <td> Age of patient (in years)</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
 {% if Result == "" %}
+  <section id="modelvalues">
+    <div id="valueheading">
+      <h3>Values To Be Entered For Predictions</h3>
+    </div>
+    <div id="valuetable">
+      <table class="table table-dark table-hover table-bordered">
+        <caption>
+          Values to be Entered
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">S.no.</th>
+            <th scope="col">Label</th>
+            <th scope="col">Value To Be Added</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+            <th scope="row">1</th>
+            <td>Pregnancies</td>
+            <td>Number of times pregnant</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Glucose</td>
+            <td>Plasma glucose concentration a 2 hours in an oral glucose tolerance test</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Blood Pressure</td>
+            <td>Diastolic blood pressure (mm Hg)</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Skin Thickness</td>
+            <td> Triceps skin fold thickness (mm)</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>BMI</td>
+            <td> Body mass index (weight in kg/(height in m)^2)</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>Diabetes Pedigree Function</td>
+            <td>Diabetes pedigree function (a function which scores likelihood of diabetes based on family history)</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>Age</td>
+            <td> Age of patient (in years)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
     <section id="modelform">
     <div id="formtitle">
         <h3>Diabetese Prediction</h3>

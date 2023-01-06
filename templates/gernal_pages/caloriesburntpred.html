@@ -28,64 +28,64 @@
     />
   </div>
 </section>
-<section id="modelvalues">
-  <div id="valueheading">
-    <h3>Values To Be Entered For Predictions</h3>
-  </div>
-  <div id="valuetable">
-    <table class="table table-dark table-hover table-bordered">
-      <caption>
-        Values to be Entered
-      </caption>
-      <thead>
-        <tr>
-          <th scope="col">S.no.</th>
-          <th scope="col">Label</th>
-          <th scope="col">Value To Be Added</th>
-        </tr>
-      </thead>
-      <tbody class="table-group-divider">
-        <tr>
-            <!-- Gender	Age	Height	Weight	Duration	Heart_Rate	Body_Temp -->
-          <th scope="row">1</th>
-          <td>Gender</td>
-          <td>Gender of the person doing the exercise</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Age (in years)</td>
-          <td>Age of the person doing the exercise</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Height (in Cm)</td>
-          <td>Height of the person doing the exercise</td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>Weight (in Kgs)</td>
-          <td>Weight of the person doing the exercise</td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>Duration</td>
-          <td>Duration of the exercise</td>
-        </tr>
-        <tr>
-          <th scope="row">6</th>
-          <td>Heart Rate</td>
-          <td>Heart Rate of the person doing exercise</td>
-        </tr>
-        <tr>
-          <th scope="row">7</th>
-          <td>Body Temp</td>
-          <td>Body Temp of the person doing exercise</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
 {% if Result == -1 %}
+  <section id="modelvalues">
+    <div id="valueheading">
+      <h3>Values To Be Entered For Predictions</h3>
+    </div>
+    <div id="valuetable">
+      <table class="table table-dark table-hover table-bordered">
+        <caption>
+          Values to be Entered
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">S.no.</th>
+            <th scope="col">Label</th>
+            <th scope="col">Value To Be Added</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+              <!-- Gender	Age	Height	Weight	Duration	Heart_Rate	Body_Temp -->
+            <th scope="row">1</th>
+            <td>Gender</td>
+            <td>Gender of the person doing the exercise</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Age (in years)</td>
+            <td>Age of the person doing the exercise</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Height (in Cm)</td>
+            <td>Height of the person doing the exercise</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Weight (in Kgs)</td>
+            <td>Weight of the person doing the exercise</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Duration</td>
+            <td>Duration of the exercise</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>Heart Rate</td>
+            <td>Heart Rate of the person doing exercise</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>Body Temp</td>
+            <td>Body Temp of the person doing exercise</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
     <section id="modelform">
     <div id="formtitle">
         <h3>Calories Burnt Prediction</h3>
@@ -137,7 +137,7 @@
         <h3>Result</h3>
     </div>
     <div id="message">The Calories You Burnt During Exercise is :</div>
-    <div id="finalresult">&#x20B9;{{Result}}</div>
+    <div id="finalresult">{{Result}}</div>
     <div class="gobackbtn">
         <a href="{{url_for('caloriesburnt')}}" class="btn btn-secondary btn-lg active predictbtn" role="button" >Predict Another Now!</a>
     </div>

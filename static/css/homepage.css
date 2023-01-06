@@ -1,6 +1,5 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 /* section 1 pred center */
 #predcenter{
     display: flex;
@@ -14,13 +13,13 @@
     padding:1rem;
     margin: 0.5rem;
     text-align: center;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Merriweather', serif;
 }
 #problem{
     text-align: justify;
     padding:1rem;
     margin: 0.5rem;
-    font-family: 'Amatic SC', cursive;
+    font-family: cursive;
     font-size: 1.5rem;
 }
 /* section2 predictions */
@@ -32,8 +31,8 @@
     margin:1.5rem;
     padding: 1rem;
     margin-bottom: 0rem;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 4rem;
+    font-family: 'Merriweather', serif;
+    font-size: 20rem;
 }
 #cardcontainer{
     display: flex;
@@ -61,7 +60,7 @@
     justify-content: center;
 }
 .modelname{
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Merriweather', serif;
     font-size: 2.5rem;
     text-align: center;
 }
@@ -98,8 +97,8 @@
     margin:1.5rem;
     padding: 1rem;
     margin-bottom: 0rem;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 4rem;
+    font-family: 'Merriweather', serif;
+    font-size: 20rem;
 }
 #aboutcontainer{
     display: flex;

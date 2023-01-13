@@ -117,3 +117,9 @@
     font-weight:bold;
     font-size: 2rem;
 }
+
+@media (max-width: 1100px) {
+    #Modelhead{
+        flex-direction: column;
+    }
+}
